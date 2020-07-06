@@ -7,7 +7,7 @@ class Bloque (pygame.sprite.Sprite):
         self.rect = self.imagen_bloque.get_rect()
         self.rect.x = pos_x
         self.rect.y= pos_y
-        self.velocidad = 10
 
     def dibujar(self,superficie):
         superficie.blit(self.imagen_bloque, self.rect)
+
