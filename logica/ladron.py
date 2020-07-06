@@ -5,8 +5,8 @@ class Ladron (pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.imagen_ladron = pygame.image.load("img/Ladron.png")
         self.rect = self.imagen_ladron.get_rect()
-        self.rect.centerx = 200
-        self.rect.centery= 250
+        self.rect.x = 150
+        self.rect.y= 100
         self.velocidad = 10
 
     def dibujar(self,superficie):
