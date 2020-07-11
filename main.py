@@ -1,6 +1,8 @@
 import  pygame
 from pygame import *
-from logica import ladron, bloque
+from logica import bloque
+from logica.constructores import *
+from logica.fabricas import *
 
 #Variables Globales
 SCREEN_WITH = 510
@@ -24,7 +26,9 @@ game_running = True
 clock = pygame.time.Clock()
 
 #Objetos
-jugador = ladron.Ladron()
+director = Director()
+director.set_builder(fabrica_ladron())
+jugador = director.get_personaje()
 lista_bloques = []
 background = pygame.transform.scale(pygame.image.load("img/bg.png"), (SCREEN_WITH, SCREEN_HEIGHT))    
 
